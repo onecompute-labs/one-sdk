@@ -5,11 +5,11 @@
 [![node](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org)
 [![types](https://img.shields.io/badge/types-included-3178c6)](https://www.typescriptlang.org)
 
-OpenAI-compatible TypeScript SDK for **[ONE](https://onecompute.xyz)** — the token-gated, decentralized AI compute network.
+OpenAI-compatible TypeScript SDK for **[ONE](https://onecomputeai.xyz)** — the token-gated, decentralized AI compute network.
 
 > **Hold $ONE, AI is yours.**
 
-ONE routes inference to a permissionless network of workers. Stake $ONE for the Included lane (free credits) or pay-as-you-go in USDC — either way you hit a single OpenAI-shaped gateway. The request and response schemas mirror OpenAI's, so this client is a **drop-in replacement**: change the base URL and your key, keep your existing code, agent frameworks, and tooling.
+ONE routes inference to a permissionless network of workers. Stake $ONE for the Included lane (free credits) or pay-as-you-go in USDT — either way you hit a single OpenAI-shaped gateway. The request and response schemas mirror OpenAI's, so this client is a **drop-in replacement**: change the base URL and your key, keep your existing code, agent frameworks, and tooling.
 
 Every completion is backed by a **signed receipt** proving which worker produced which output — verifiable with OneVerify.
 
@@ -48,7 +48,7 @@ import { OneClient } from "@onecompute/sdk";
 
 const one = new OneClient({
   apiKey: process.env.ONE_API_KEY!, // dedicated package key, or a holder session token
-  // baseURL defaults to https://platform.onecompute.xyz/v1
+  // baseURL defaults to https://onecomputeai.xyz/platform/v1
 });
 ```
 
@@ -275,7 +275,7 @@ const res = await one.chat.completions.create({ model, messages });
 
 if (res._receipt) {
   const { requestHash, model, worker, outputDigest, sig, prev } = res._receipt;
-  // Verify the chain with OneVerify — see https://docs.onecompute.xyz
+  // Verify the chain with OneVerify — see https://onecomputeai.xyz/docs
 }
 ```
 
@@ -301,7 +301,7 @@ new OneClient(options: OneClientOptions)
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | `apiKey` | `string` | — | **Required.** Package key or holder session token. |
-| `baseURL` | `string` | `https://platform.onecompute.xyz/v1` | Gateway base URL (trailing slashes are normalized). |
+| `baseURL` | `string` | `https://onecomputeai.xyz/platform/v1` | Gateway base URL (trailing slashes are normalized). |
 | `fetch` | `typeof fetch` | global `fetch` | Inject a custom transport (proxy, mock, instrumentation). |
 | `timeout` | `number` (ms) | `60000` | Per-request timeout. `0` disables it. |
 | `maxRetries` | `number` | `2` | Retries on transient failures (after the first attempt). |
@@ -347,10 +347,10 @@ Tests use only the built-in `node:test` runner and `node:assert/strict` — no t
 
 ## Contributing
 
-Issues and PRs are welcome at [github.com/onecomputexyz/one-sdk](https://github.com/onecomputexyz/one-sdk). Please keep the zero-dependency, ESM, strict-TypeScript conventions, and add `node:test` coverage for new behavior.
+Issues and PRs are welcome at [github.com/onecompute-labs/one-sdk](https://github.com/onecompute-labs/one-sdk). Please keep the zero-dependency, ESM, strict-TypeScript conventions, and add `node:test` coverage for new behavior.
 
 ---
 
 ## License
 
-MIT © 2026 ONE Protocol · [docs](https://docs.onecompute.xyz) · [site](https://onecompute.xyz) · [github](https://github.com/onecomputexyz/one-sdk)
+MIT © 2026 ONE Protocol · [docs](https://onecomputeai.xyz/docs) · [site](https://onecomputeai.xyz) · [github](https://github.com/onecompute-labs/one-sdk)
