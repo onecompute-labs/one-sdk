@@ -29,7 +29,7 @@ import type {
   Receipt,
 } from "./types.js";
 
-export const DEFAULT_BASE_URL = "https://platform.onecompute.xyz/v1";
+export const DEFAULT_BASE_URL = "https://onecomputeai.xyz/platform/v1";
 
 export interface OneClientOptions {
   /** Dedicated package key, or a holder session token for the Included lane. */
