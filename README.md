@@ -1,9 +1,6 @@
 # @onecompute/sdk
 
-[![npm version](https://img.shields.io/badge/npm-v0.1.0-cb3837)](https://www.npmjs.com/package/@onecompute/sdk)
-[![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
-[![node](https://img.shields.io/badge/node-%3E%3D20-339933)](https://nodejs.org)
-[![types](https://img.shields.io/badge/types-included-3178c6)](https://www.typescriptlang.org)
+Version: 0.1.0 · License: MIT · Node.js >= 20 · TypeScript types included
 
 OpenAI-compatible TypeScript SDK for **[ONE](https://onecomputeai.xyz)** — the token-gated, decentralized AI compute network.
 
