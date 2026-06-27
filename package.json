@@ -1,0 +1,27 @@
+{
+  "name": "@onecompute/sdk",
+  "version": "0.1.0",
+  "description": "OpenAI-compatible TypeScript SDK for the ONE decentralized AI network",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "files": ["dist", "!dist/**/*.test.*"],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test 'dist/**/*.test.js'",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": { "node": ">=20" },
+  "repository": "github:onecomputexyz/one-sdk",
+  "homepage": "https://onecompute.xyz",
+  "bugs": "https://github.com/onecomputexyz/one-sdk/issues",
+  "keywords": ["ai", "llm", "openai", "decentralized", "one", "sdk", "inference"]
+}
