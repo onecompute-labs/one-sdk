@@ -347,10 +347,10 @@ Tests use only the built-in `node:test` runner and `node:assert/strict` — no t
 
 ## Contributing
 
-Issues and PRs are welcome at [github.com/onecompute-labs/one-sdk](https://github.com/onecompute-labs/one-sdk). Please keep the zero-dependency, ESM, strict-TypeScript conventions, and add `node:test` coverage for new behavior.
+Issues and PRs are welcome in this repository. Please keep the zero-dependency, ESM, strict-TypeScript conventions, and add `node:test` coverage for new behavior.
 
 ---
 
 ## License
 
-MIT © 2026 ONE Protocol · [docs](https://onecomputeai.xyz/docs) · [site](https://onecomputeai.xyz) · [github](https://github.com/onecompute-labs/one-sdk)
+MIT © 2026 ONE Protocol · [docs](https://onecomputeai.xyz/docs) · [site](https://onecomputeai.xyz)
